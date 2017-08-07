@@ -2,9 +2,9 @@ Gadgetbridge
 ============
 
 Gadgetbridge is an Android (4.4+) application which will allow you to use your
-Pebble, Mi Band, Amazfit Bip and HPlus device (and more) without the vendor's closed source application
-and without the need to create an account and transmit any of your data to the
-vendor's servers.
+Pebble, Mi Band, Amazfit Bip, HPlus and Lenovo device (and more) without the
+vendor's closed source application and without the need to create an account
+and transmit any of your data to the vendor's servers.
 
 
 [Homepage](https://gadgetbridge.org)
@@ -30,6 +30,7 @@ vendor's servers.
 * HPlus Devices (e.g. ZeBand) [Wiki](https://github.com/Freeyourgadget/Gadgetbridge/wiki/HPlus)
 * ID115 (WIP)
 * Lenovo Watch 9 (WIP)
+* Lenovo HW01 (WIP)[Wiki](https://github.com/Freeyourgadget/Gadgetbridge/wiki/HW01)
 * Liveview (WIP)
 * Mi Band, Mi Band 1A, Mi Band 1S [Wiki](https://github.com/Freeyourgadget/Gadgetbridge/wiki/Mi-Band)
 * Mi Band 2 [Wiki](https://github.com/Freeyourgadget/Gadgetbridge/wiki/Mi-Band-2)
@@ -70,6 +71,10 @@ For more information read [this wiki article](https://github.com/Freeyourgadget/
 3. Tap the Mi Band item to connect if you're not connected yet
 4. To test, chose "Debug" from the menu and play around
 
+## Features (Lenovo HW01)
+
+* Discovery and pairing
+
 **Known Issues:**
 
 * The initial connection to a Mi Band sometimes takes a little patience. Try to connect a few times, wait, 
@@ -103,6 +108,7 @@ For more information read [this wiki article](https://github.com/Freeyourgadget/
 * Sebastian Kranz (ZeTime)
 * Vadim Kaushan (ID115)
 * "maxirnilian" (Lenovo Watch 9)
+* Nabil Bendafi (Lenovo HW01)
 
 ## Contribute
 

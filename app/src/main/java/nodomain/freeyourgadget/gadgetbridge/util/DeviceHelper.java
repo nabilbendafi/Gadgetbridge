@@ -54,6 +54,7 @@ import nodomain.freeyourgadget.gadgetbridge.devices.id115.ID115Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.jyou.TeclastH30Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.roidmi.Roidmi1Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.roidmi.Roidmi3Coordinator;
+import nodomain.freeyourgadget.gadgetbridge.devices.lenovo.LenovoCoordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.liveview.LiveviewCoordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.miband.MiBandConst;
 import nodomain.freeyourgadget.gadgetbridge.devices.miband.MiBandCoordinator;
@@ -208,6 +209,7 @@ public class DeviceHelper {
         result.add(new MiBandCoordinator());
         result.add(new PebbleCoordinator());
         result.add(new VibratissimoCoordinator());
+        result.add(new LenovoCoordinator());
         result.add(new LiveviewCoordinator());
         result.add(new HPlusCoordinator());
         result.add(new No1F1Coordinator());
