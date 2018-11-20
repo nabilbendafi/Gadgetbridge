@@ -1,4 +1,4 @@
-/*  Copyright (C) 2017 Nabil Bendafi
+/*  Copyright (C) 2018 Nabil Bendafi
 
     This file is part of Gadgetbridge.
 
