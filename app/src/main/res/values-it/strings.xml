@@ -495,6 +495,7 @@
     <string name="devicetype_exrizu_k8">Exrizu K8</string>
     <string name="devicetype_no1_f1">No.1 F1</string>
     <string name="devicetype_teclast_h30">Teclast H30</string>
+    <string name="devicetype_lenovo_hw01">HW01</string>
 
     <string name="choose_auto_export_location">Seleziona percorso di esportazione</string>
     <string name="notification_channel_name">Notifiche Gadgetbridge</string>

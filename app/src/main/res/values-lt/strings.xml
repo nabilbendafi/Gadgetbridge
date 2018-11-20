@@ -64,6 +64,7 @@
     <string name="devicetype_hplus">HPlus</string>
     <string name="devicetype_makibes_f68">Makibes F68</string>
     <string name="devicetype_exrizu_k8">Exrizu K8</string>
+    <string name="devicetype_lenovo_hw01">HW01</string>
     <string name="menuitem_activity">Veikla</string>
     <string name="controlcenter_calibrate_device">Kalibruoti įrenginį</string>
 

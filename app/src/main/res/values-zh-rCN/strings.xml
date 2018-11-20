@@ -655,6 +655,7 @@
     <string name="devicetype_watch9">Watch 9</string>
     <string name="devicetype_roidmi">睿米</string>
     <string name="devicetype_roidmi3">睿米３</string>
+    <string name="devicetype_lenovo_hw01">HW01</string>
 
     <string name="menuitem_shortcut_alipay">支付宝（快捷方式）</string>
     <string name="menuitem_shortcut_weather">天气（快捷方式）</string>

@@ -548,6 +548,7 @@
     <string name="devicetype_teclast_h30">Teclast H30</string>
     <string name="devicetype_xwatch">XWatch</string>
     <string name="devicetype_mykronoz_zetime">MyKronoz ZeTime</string>
+    <string name="devicetype_lenovo_hw01">HW01</string>
 
     <string name="preferences_id115_settings">Настройки ID115</string>
     <string name="prefs_screen_orientation">Ориентация экрана</string>
