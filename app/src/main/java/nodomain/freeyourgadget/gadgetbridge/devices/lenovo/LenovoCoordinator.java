@@ -1,4 +1,4 @@
-/*  Copyright (C) 2018 Nabil Bendafi
+/*  Copyright (C) 2018 Nabil BENDAFI <nabil@bendafi.fr>
 
     This file is part of Gadgetbridge.
 
@@ -18,14 +18,13 @@ package nodomain.freeyourgadget.gadgetbridge.devices.lenovo;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.le.ScanFilter;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.ParcelUuid;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,27 +42,30 @@ import nodomain.freeyourgadget.gadgetbridge.impl.GBDevice;
 import nodomain.freeyourgadget.gadgetbridge.impl.GBDeviceCandidate;
 import nodomain.freeyourgadget.gadgetbridge.model.ActivitySample;
 import nodomain.freeyourgadget.gadgetbridge.model.DeviceType;
+import nodomain.freeyourgadget.gadgetbridge.util.Prefs;
 
 public class LenovoCoordinator extends AbstractDeviceCoordinator {
     private static final Logger log = LoggerFactory.getLogger(LenovoCoordinator.class);
 
-    @Override
-    public DeviceType getDeviceType() {
-        return DeviceType.LENOVO;
-    }
 
     @NonNull
     @Override
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public Collection<? extends ScanFilter> createBLEScanFilters() {
-        ParcelUuid lenovoService = new ParcelUuid(LenovoConstants.UUID_SERVICE_LENOVO);
+        ParcelUuid lenovoService = new ParcelUuid(LenovoService.UUID_SERVICE_LENOVO_HW01_B);
         ScanFilter filter = new ScanFilter.Builder().setServiceUuid(lenovoService).build();
         return Collections.singletonList(filter);
     }
 
+
     @Override
     protected void deleteDevice(@NonNull GBDevice gbDevice, @NonNull Device device, @NonNull DaoSession session) throws GBException {
+    }
 
+
+    @Override
+    public DeviceType getDeviceType() {
+        return DeviceType.LENOVO;
     }
 
     @NonNull
@@ -77,15 +79,33 @@ public class LenovoCoordinator extends AbstractDeviceCoordinator {
         return DeviceType.UNKNOWN;
     }
 
-    @Nullable
+    @Override
+    public boolean supportsCalendarEvents() {
+        return false;
+    }
+
+    @Override
+    public boolean supportsRealtimeData() {
+        return true;
+    }
+
+    @Override
+    public boolean supportsWeather() {
+        return false;
+    }
+
+    @Override
+    public boolean supportsFindDevice() {
+        return true;
+    }
+
     @Override
     public Class<? extends Activity> getPairingActivity() {
         return null;
     }
 
-    @Nullable
     @Override
-    public Class<? extends Activity> getPrimaryActivity() {
+    public InstallHandler findInstallHandler(Uri uri, Context context) {
         return null;
     }
 
@@ -101,11 +121,6 @@ public class LenovoCoordinator extends AbstractDeviceCoordinator {
 
     @Override
     public SampleProvider<? extends ActivitySample> getSampleProvider(GBDevice device, DaoSession session) {
-        return null;
-    }
-
-    @Override
-    public InstallHandler findInstallHandler(Uri uri, Context context) {
         return null;
     }
 
@@ -131,7 +146,7 @@ public class LenovoCoordinator extends AbstractDeviceCoordinator {
 
     @Override
     public String getManufacturer() {
-        return null;
+        return "Lenovo";
     }
 
     @Override
@@ -144,13 +159,4 @@ public class LenovoCoordinator extends AbstractDeviceCoordinator {
         return null;
     }
 
-    @Override
-    public boolean supportsCalendarEvents() {
-        return false;
-    }
-
-    @Override
-    public boolean supportsRealtimeData() {
-        return false;
-    }
 }

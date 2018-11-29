@@ -1,4 +1,4 @@
-/*  Copyright (C) 2017 Nabil Bendafi
+/*  Copyright (C) 2018 Nabil BENDAFI <nabil@bendafi.fr>
 
     This file is part of Gadgetbridge.
 
@@ -24,6 +24,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import nodomain.freeyourgadget.gadgetbridge.devices.lenovo.LenovoService;
 import nodomain.freeyourgadget.gadgetbridge.model.Alarm;
 import nodomain.freeyourgadget.gadgetbridge.model.CalendarEventSpec;
 import nodomain.freeyourgadget.gadgetbridge.model.CallSpec;
@@ -45,6 +46,9 @@ public class LenovoSupport extends AbstractBTLEDeviceSupport {
         super(LOG);
         addSupportedService(GattService.UUID_SERVICE_GENERIC_ACCESS);
         addSupportedService(GattService.UUID_SERVICE_GENERIC_ATTRIBUTE);
+
+        addSupportedService(LenovoService.UUID_SERVICE_LENOVO_HW01_B);
+        addSupportedService(GattService.UUID_SERVICE_IMMEDIATE_ALERT);
 
         deviceType = type;
     }
@@ -115,17 +119,12 @@ public class LenovoSupport extends AbstractBTLEDeviceSupport {
     }
 
     @Override
-    public void onAppConfiguration(UUID appUuid, String config) {
-
+    public void onAppConfiguration(UUID uuid, String config, Integer id) {
+        // not supported
     }
 
     @Override
     public void onAppReorder(UUID[] uuids) {
-
-    }
-
-    @Override
-    public void onFetchActivityData() {
 
     }
 
@@ -155,12 +154,22 @@ public class LenovoSupport extends AbstractBTLEDeviceSupport {
     }
 
     @Override
+    public void onFetchRecordedData(int dataTypes) {
+
+    }
+
+    @Override
     public void onScreenshotReq() {
 
     }
 
     @Override
     public void onEnableHeartRateSleepSupport(boolean enable) {
+
+    }
+
+    @Override
+    public void onSetHeartRateMeasurementInterval(int seconds) {
 
     }
 
