@@ -131,7 +131,12 @@ public class LenovoCoordinator extends AbstractDeviceCoordinator {
 
     @Override
     public boolean supportsAlarmConfiguration() {
-        return false;
+        return true;
+    }
+
+    @Override
+    public int getAlarmSlotCount() {
+        return 2;
     }
 
     @Override
